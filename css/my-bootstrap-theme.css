@@ -1,0 +1,1301 @@
+@font-face {
+    font-family: "Eurostile";
+    src: url("../fonts/eurostile.eot");
+    src: url("../fonts/eurostile.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/eurostile.woff") format("woff"),
+         url("../fonts/eurostile.ttf") format("truetype"),
+         url("../fonts/eurostile.svg#Eurostile") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #000;
+    font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;   
+}
+.navbar {  
+    min-height: 90px;  
+}
+.navbar-default {
+    /*background-color: #404040;*/  
+    background-color: transparent;
+}
+.navbar-brand {
+    float: left;
+    padding: 28px 15px;
+    font-size: 18px;
+    line-height: none;
+}
+@media (min-width: 768px) {
+  .navbar > .container .navbar-brand {
+    margin-left: 0px;
+    padding: 28px 0px;
+  }         
+  .navbar-nav.navbar-right:last-child {
+    margin-right: 0px;
+  }
+}
+.navbar-toggle {  
+    margin-top: 28px;  
+    margin-bottom: 28px;  
+}
+
+.navbar-default .navbar-collapse
+{
+    border-color: #FFF;         
+}
+
+.navbar-fixed-top
+{  
+    border-width: 0 0 2px;
+    border-color: #FFF;  
+}
+
+.nav {
+    margin-bottom: -2px;    
+}
+/*.nav > li
+{            
+}      
+.nav > li > a {
+    border-bottom: 2px solid transparent;    
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    border-bottom: 2px solid #F1533C; 
+} */
+
+.navbar-default .navbar-nav > li > a {
+  color: #FFF;
+  border-bottom: 2px solid transparent;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #F1533C;
+  /*background-color: #606060;*/
+  border-bottom: 2px solid #F1533C;  
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #F1533C;
+  background-color: transparent;
+  border-bottom: 2px solid #F1533C;
+}
+
+.navbar-default .navbar-nav > .disabled > a,
+.navbar-default .navbar-nav > .disabled > a:hover,
+.navbar-default .navbar-nav > .disabled > a:focus {
+  color: #cccccc;
+  background-color: transparent;
+}
+.myfixedContent
+{
+    position: fixed;
+    top:92px;
+    bottom:70px;
+    right: 0;
+    left: 0;
+    overflow-y: auto;  
+}
+.myContent
+{
+    /*background-color: gray; */
+    margin-top: 50px;
+    /*margin-bottom: 70px;*/
+}
+.myContent h1, .myContent a,
+.myContent h3, .myContent h2, .myContent h4,
+.myFooter h2, .myFooter a
+{
+    font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #FFF;  
+}
+.myContent h1.linkteam,
+.myContent h3.linkteam,
+.myContent h1.we_hire
+{
+    font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;
+    color: #F1533C;   
+}
+.myContent h1.link,
+.myContent h1.linkteam,
+.myContent h1.we_hire
+{    
+    font-size: 46px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/*.myContent div.stylie
+{
+    font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+    font-size: 46px;
+    line-height: 40px;
+    padding: 7px 10px;  
+    margin-bottom: 10px;
+    display: inline-block;
+}*/
+.myContent div.red-white-r
+{
+    background-color: #F1533C;
+    color: #FFFFFF;
+    font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+    font-size: 46px;
+    line-height: 40px;
+    padding: 7px 10px;  
+    margin-bottom: 10px;
+    /*display: inline-block;*/
+    /*transform: rotateY(90deg);*/
+    display: none;
+}
+/*.myContent div.red-white-rr
+{
+    background-color: #F1533C;
+    color: #FFFFFF;
+    font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+    font-size: 46px;
+    line-height: 40px;
+    padding: 7px 10px;  
+    margin-bottom: 10px;
+    display: inline-block;
+}*/
+
+.myContent div.red-white
+{
+    background-color: #F1533C;
+    color: #FFFFFF;
+    display: none;
+}
+.myContent div.white-red
+{
+    background-color: #FFFFFF;
+    color: #F1533C;
+    display: none;
+}
+.myContent div.black-white
+{
+    background-color: #000;
+    color: #FFFFFF;
+    display: none;
+}
+.myContent div#krug_scroll
+{
+    opacity: 0;
+    background-image: url('/img/krug_scroll.png');
+    width: 75px;
+    height: 75px;
+    background-color: red;
+    margin: 0 auto 0;
+}
+.myContent div#PageSCRL_1
+{
+    display: none;
+}
+.myContent div#PageSCRL_2
+{
+    display: none;
+    position:relative;
+}
+.myContent div#prePage
+{
+    height: 0px;
+}
+
+/*Begin Animation iPhone*/
+/*.myContent div#iphone5
+{
+    background-color: transparent; 
+    margin-top: 10px; 
+    z-index:20;
+    position:absolute;
+    display: none;    
+}
+.myContent div#iphone5>img
+{
+    width: 250px;
+}
+.myContent div#player3423
+{    
+    width: 35%;
+    display: none;
+    background-color: transparent; 
+    margin-top: 150px;
+    z-index:20;
+    position:absolute;        
+}
+.myContent div#tv-front
+{
+    background-color: aqua;
+    margin-top: 80px;
+    z-index:10;
+    position:absolute;
+}*/
+/*Begin Animation iPhone*/
+
+.myContent .bigImage
+{
+    width: 207px;
+    height: 207px;
+}
+.myContent .smallImage
+{
+    width: 157px;
+    height: 157px;
+}
+
+@media (max-width: 500px) { /*(max-width: 500px)*/
+    .myContent h1.link,
+    .myContent h1.linkteam
+    {    
+        font-size: 40px;
+        line-height: 40px;       
+    }
+    .myContent h1.linkteam + h3.thin
+    {
+        /*margin-left: 35px;*/
+    }
+    .myContent .bigImage
+    {
+        width: 157px;
+        height: 157px;
+    }
+    .container
+    {
+        width: 470px;
+    }
+}
+.myContent h1.link>a,
+.myContent h3.link>a
+{
+    text-decoration: underline;
+}
+.myContent h1.link>a:hover,
+.myContent h3.link>a:hover
+{
+    color: #F1533C;
+}
+.myContent h3.thin
+{
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 26px;
+}
+.myContent h3.textbold
+{
+    font-weight: bold;
+}
+.myContent h3.m-b
+{
+    margin-bottom: 40px;
+}
+.myContent h3.blockwidth
+{
+    width: 500px;
+}
+.myContent h4.link>a
+{
+    color: #F1533C;
+    text-decoration: underline;
+}
+.myContent h4.link>a:hover
+{
+    text-decoration: none;
+}
+.myContent .map
+{
+    padding-left: 50px;
+}
+.team-hover:hover
+{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+
+.myContent .nav-pills > li > a {
+  border-radius: 0px;
+  padding: 10px 0px;
+  outline: none;
+  font-size: 26px;
+}
+.myContent .nav-pills > li > a:hover {
+  color: #F1533C;
+  background-color: transparent;
+}
+.myContent .nav-pills > li.active > a,
+.myContent .nav-pills > li.active > a:hover,
+.myContent .nav-pills > li.active > a:focus
+{
+  color: #F1533C;
+  background-color: transparent;  
+}
+.tab-pane .col-lg-4
+{
+    padding-left: 40px;
+}
+#lineArrow
+{
+    background-image: url('../img/we_hire_line.png');
+    background-position:right -180px;
+    background-repeat: no-repeat; 
+}
+.myContent #accordion
+{    
+    display: none;
+}
+
+.panel 
+{
+    background-color: transparent;
+}
+
+.panel-default {
+  border-color: #dddddd;
+}
+
+.panel-default > .panel-heading {
+  color: #333333;
+  background-color: transparent;
+  border-color: #dddddd;
+}
+.panel-default > .panel-heading > h4.panel-title > a
+{
+    font-size: 26px;
+    color: #F1533C;
+    outline: none;
+}
+
+.panel-default > .panel-heading + .panel-collapse .panel-body {
+  border-top-color:#F1533C;
+}
+
+
+
+.myFooter a:hover
+{
+    text-decoration: none;
+    color: #F1533C;
+}
+.myFooter a:focus
+{
+    text-decoration: none;
+    color: #FFF;
+}
+.myFooter a.active
+{
+    color: #F1533C;
+}
+
+.myFooter .col-lg-9,
+.myFooter .col-md-9,
+.myFooter .col-sm-9,
+.myFooter .col-xs-9
+{
+    padding-left: 15px;
+}
+.myFooter .col-lg-1,
+.myFooter .col-md-1,
+.myFooter .col-sm-1,
+.myFooter .col-xs-1
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+@media (max-width: 550px) {
+
+    /*Begin Animation iPhone*/
+    .myContent div#iphone5
+    {
+        background-color: transparent; 
+        margin-top: 0px; 
+        z-index:20;
+        position:absolute;
+        display: none;        
+        margin-left: 15%;
+        width: 60%;
+    }
+    .myContent div#iphone5>img
+    {
+        width: 50%;
+    }
+    .myContent div#volna
+    {
+        width: 30%;
+        margin-left: 50%;
+        background-color: transparent; 
+        margin-top: 80px; 
+        z-index:20;
+        position:absolute;
+        display: none;   
+    }
+    .myContent div#volna>img
+    {
+        width:100%;
+    }
+    .myContent div#player3423
+    {    
+        width: 45%;
+        display: none;
+        background-color: transparent; 
+        margin-top: 340px;
+        z-index:20;
+        position:absolute;
+        margin-left: 35%;       
+    }
+    .myContent div#tv-front
+    {
+        background-color: green;
+        margin: 335px auto 0px;
+        /*margin-top: 325px;*/
+        z-index:10;
+        /*position:absolute;*/
+        /*margin-left: 20%;*/
+        width: 70%;
+    }
+    /*Begin Animation iPhone*/
+    .myContent div.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 27px;
+        line-height: 23px;
+        padding: 3px 3px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: right;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 650px) {
+
+    /*Begin Animation iPhone*/
+    .myContent div#iphone5
+    {
+        background-color: transparent; 
+        margin-top: 0px; 
+        z-index:20;
+        position:absolute;
+        display: none;        
+        margin-left: 20%;
+        width: 50%;
+    }
+    .myContent div#iphone5>img
+    {
+        width: 50%;
+    }
+    .myContent div#volna
+    {
+        width: 28%;
+        margin-left: 50%;
+        background-color: transparent; 
+        margin-top: 80px; 
+        z-index:20;
+        position:absolute;
+        display: none;   
+    }
+    .myContent div#volna>img
+    {
+        width:100%;
+    }
+    .myContent div#player3423
+    {    
+        width: 45%;
+        display: none;
+        background-color: transparent; 
+        margin-top: 340px;
+        z-index:20;
+        position:absolute;
+        margin-left: 35%;       
+    }
+    .myContent div#tv-front
+    {
+        background-color: green;
+        margin: 335px auto 0px;
+        /*margin-top: 325px;*/
+        z-index:10;
+        /*position:absolute;*/
+        /*margin-left: 20%;*/
+        width: 60%;
+    }
+    /*Begin Animation iPhone*/
+    .myContent div.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 27px;
+        line-height: 23px;
+        padding: 3px 3px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: right;
+    }
+
+}
+@media (min-width: 650px) and (max-width: 768px)
+{
+    /*Begin Animation iPhone*/
+    .myContent div#iphone5
+    {
+        background-color: transparent; 
+        margin-top: 5px; 
+        z-index:20;
+        position:absolute;
+        display: none;        
+        margin-left: 5%;
+        width: 25%;
+    }
+    .myContent div#iphone5>img
+    {
+        width: 100%;
+    }
+    .myContent div#volna
+    {
+        width: 25%;
+        margin-left: 27%;
+        background-color: transparent; 
+        margin-top: 100px; 
+        z-index:20;
+        position:absolute;
+        display: none;   
+    }
+    .myContent div#volna>img
+    {
+        width:100%;
+    }
+    .myContent div#player3423
+    {    
+        width: 30%;
+        display: none;
+        background-color: transparent; 
+        margin-top: 120px;
+        z-index:20;
+        position:absolute;
+        margin-left: 55%;       
+    }
+    .myContent div#tv-front
+    {
+        background-color: white;
+        margin-top: 100px;
+        z-index:10;
+        position:absolute;
+        margin-left: 50%;
+        width: 40%;
+    }
+    /*Begin Animation iPhone*/
+
+    .myContent div.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 34px;
+        line-height: 30px;
+        padding: 4px 4px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: right;
+    } 
+}
+
+@media (max-width: 768px) {
+    /*.navbar-collapse.in {
+          overflow-y: visible;
+          border-bottom-width: 2px;
+          border-color: #FFF;
+    }*/     
+    .navbar-collapse.in .nav {
+          margin-bottom: 0px;
+    }
+    .navbar-default .navbar-collapse
+    {
+        background-color: #404040;    
+    }
+        
+    .navbar-default .navbar-nav > li > a,
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus,
+    .navbar-default .navbar-nav > .active > a,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus,
+    .navbar-default .navbar-nav > .disabled > a,
+    .navbar-default .navbar-nav > .disabled > a:hover,
+    .navbar-default .navbar-nav > .disabled > a:focus {  
+        border-bottom: none;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        line-height: 20px;
+        font-size: 20px;
+    }
+    
+    .navbar-default .navbar-nav > li > a:hover,
+    .navbar-default .navbar-nav > li > a:focus,
+    .navbar-default .navbar-nav > .active > a:hover,
+    .navbar-default .navbar-nav > .active > a:focus
+    {
+        background-color: #606060;
+    }
+    .myFooter h2
+    {
+        font-size: 16px;         
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    #sound
+    {
+        width: 15px;
+    }
+    .myfixedContent
+    {
+        bottom:50px
+    }    
+    .myContent h3.m-b
+    {
+        margin-bottom: 10px;
+    }
+    .myContent .map
+    {
+        padding-left: 15px;
+        padding-top: 10px;
+    }
+    .myContent h3.blockwidth
+    {
+        width: 100%;
+    }
+    .myContent h1.we_hire
+    {    
+        font-size: 34px;
+        line-height: 34px;       
+    }
+    .myContent #accordion
+    {    
+        display: block;
+    }
+    .myContent #tab-accordion
+    {    
+        display: none;   
+    }
+    
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .navbar-default .navbar-nav > li > a
+    {        
+        padding-top: 33px;
+        padding-bottom: 33px;
+        padding-left: 6px;
+        padding-right: 6px;
+        line-height: 24px;
+        font-size: 24px;
+    }
+    .myFooter h2
+    {
+        font-size: 18px;         
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #sound
+    {
+        width: 18px;
+    }
+    .myContent h1.we_hire
+    {    
+        font-size: 40px;
+        line-height: 40px;       
+    }
+      /*Begin Animation iPhone*/
+    .myContent div#iphone5
+    {
+        background-color: transparent; 
+        margin-top: 10px; 
+        z-index:20;
+        position:absolute;
+        display: none;    
+    }
+    .myContent div#iphone5>img
+    {
+        width: 200px;
+    }
+    .myContent div#volna
+    {
+        width: 26%;
+        margin-left: 31%;
+        background-color: transparent; 
+        margin-top: 120px; 
+        z-index:20;
+        position:absolute;
+        display: none;   
+    }
+    .myContent div#volna>img
+    {
+        width:100%;
+    }
+    .myContent div#player3423
+    {    
+        width: 35%;
+        display: none;
+        background-color: transparent; 
+        margin-top: 170px;
+        z-index:20;
+        position:absolute;        
+    }
+    .myContent div#tv-front
+    {
+        background-color: blue;
+        margin-top: 120px;
+        z-index:10;
+        position:absolute;
+    }
+    /*Begin Animation iPhone*/
+
+    .myContent div.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 40px;
+        line-height: 35px;
+        padding: 5px 5px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: right;
+    } 
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .myFooter h2
+    {
+        font-size: 24px;         
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #sound
+    {
+        width: 21px;
+    }
+      /*Begin Animation iPhone*/
+    .myContent div#iphone5
+    {
+        background-color: transparent; 
+        margin-top: 20px; 
+        z-index:20;
+        position:absolute;
+        display: none;    
+    }
+    .myContent div#iphone5>img
+    {
+        width: 230px;
+    }
+    .myContent div#volna
+    {
+        width: 27%;
+        margin-left: 27%;
+        background-color: transparent; 
+        margin-top: 120px; 
+        z-index:20;
+        position:absolute;
+        display: none;   
+    }
+    .myContent div#volna>img
+    {
+        width:100%;
+    }
+    .myContent div#player3423
+    {    
+        width: 36%;
+        display: none;
+        background-color: transparent; 
+        margin-top: 180px;
+        z-index:20;
+        position:absolute;        
+    }
+    .myContent div#tv-front
+    {
+        background-color: yellow;
+        margin-top: 130px;
+        z-index:10;
+        position:absolute;
+    }
+    /*Begin Animation iPhone*/
+    .myContent div.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 40px;
+        line-height: 35px;
+        padding: 5px 5px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: right;
+    } 
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+    /*Begin Animation iPhone*/
+    .myContent div#iphone5
+    {
+        background-color: transparent; 
+        margin-top: 10px; 
+        z-index:20;
+        position:absolute;
+        display: none;    
+    }
+    .myContent div#iphone5>img
+    {
+        width: 250px;
+    }
+    .myContent div#volna
+    {
+        width: 27%;
+        background-color: transparent; 
+        margin-top: 120px; 
+        z-index:20;
+        position:absolute;
+        display: none;   
+    }
+    .myContent div#volna>img
+    {
+        width:100%;
+    }
+    .myContent div#player3423
+    {    
+        width: 37%;
+        display: none;
+        background-color: transparent; 
+        margin-top: 150px;
+        z-index:20;
+        position:absolute;        
+    }
+    .myContent div#tv-front
+    {
+        background-color: red;
+        margin-top: 110px;
+        z-index:10;
+        position:absolute;
+    }
+    /*Begin Animation iPhone*/
+
+    .myContent div.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 46px;
+        line-height: 40px;
+        padding: 7px 10px;  
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+}
+@media (min-width: 1400px) {
+      .container {
+        width: 1370px;
+      }
+      /*Begin Animation iPhone*/
+    .myContent div#iphone5
+    {
+        background-color: transparent; 
+        margin-top: 10px; 
+        z-index:20;
+        position:absolute;
+        display: none;    
+    }
+    
+    .myContent div#volna
+    {
+        width: 27%;
+        background-color: transparent; 
+        margin-top: 120px; 
+        z-index:20;
+        position:absolute;
+        display: none;   
+    }
+    .myContent div#volna>img
+    {
+        width:100%;
+    }
+    
+    .myContent div#iphone5>img
+    {
+        width: 250px;
+    }
+    .myContent div#player3423
+    {    
+        width: 38%;
+        display: none;
+        background-color: transparent; 
+        margin-top: 140px;
+        z-index:20;
+        position:absolute;        
+    }
+    .myContent div#tv-front
+    {
+        background-color: aqua;
+        margin-top: 90px;
+        z-index:10;
+        position:absolute;
+    }
+    /*Begin Animation iPhone*/
+    
+    .myContent div.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 46px;
+        line-height: 40px;
+        padding: 7px 10px;  
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+  
+}
+
+.myZindex_1
+{
+    z-index:-20;
+    width: 100%;
+    height: 100%;
+    /*margin-top: 92px;*/ 
+}
+.myZindex_2
+{
+    z-index:0;
+    background-color: black;
+    width: 100%;
+    height: 100%;    
+    margin-top: 92px;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+.mybackground
+{
+    background-image: url('../img/bg_static.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mybackground_swf
+{
+    /*overflow: hidden;*/
+}
+
+
+
+
+.stylie {
+  -moz-animation-name: stylie-keyframes;
+  -moz-animation-duration: 1800ms;
+  -moz-animation-delay: 0ms;
+  -moz-animation-fill-mode: forwards;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: 1;
+  -ms-animation-name: stylie-keyframes;
+  -ms-animation-duration: 1800ms;
+  -ms-animation-delay: 0ms;
+  -ms-animation-fill-mode: forwards;
+  -ms-animation-timing-function: linear;
+  -ms-animation-iteration-count: 1;
+  -o-animation-name: stylie-keyframes;
+  -o-animation-duration: 1800ms;
+  -o-animation-delay: 0ms;
+  -o-animation-fill-mode: forwards;
+  -o-animation-timing-function: linear;
+  -o-animation-iteration-count: 1;
+  -webkit-animation-name: stylie-keyframes;
+  -webkit-animation-duration: 1800ms;
+  -webkit-animation-delay: 0ms;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-name: stylie-keyframes;
+  animation-duration: 1800ms;
+  animation-delay: 0ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+@-moz-keyframes stylie-keyframes {
+  0% {-moz-transform:translate(0px, 0px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);}
+  1.82% {-moz-transform:translate(0px, 0px) rotateX(89.775deg) rotateY(0deg) rotateZ(0deg);}
+  3.64% {-moz-transform:translate(0px, 0px) rotateX(89.1deg) rotateY(0deg) rotateZ(0deg);}
+  5.45% {-moz-transform:translate(0px, 0px) rotateX(87.975deg) rotateY(0deg) rotateZ(0deg);}
+  7.27% {-moz-transform:translate(0px, 0px) rotateX(86.4deg) rotateY(0deg) rotateZ(0deg);}
+  9.09% {-moz-transform:translate(0px, 0px) rotateX(84.375deg) rotateY(0deg) rotateZ(0deg);}
+  10.91% {-moz-transform:translate(0px, 0px) rotateX(81.9deg) rotateY(0deg) rotateZ(0deg);}
+  12.73% {-moz-transform:translate(0px, 0px) rotateX(78.975deg) rotateY(0deg) rotateZ(0deg);}
+  14.55% {-moz-transform:translate(0px, 0px) rotateX(75.6deg) rotateY(0deg) rotateZ(0deg);}
+  16.36% {-moz-transform:translate(0px, 0px) rotateX(71.775deg) rotateY(0deg) rotateZ(0deg);}
+  18.18% {-moz-transform:translate(0px, 0px) rotateX(67.5deg) rotateY(0deg) rotateZ(0deg);}
+  20% {-moz-transform:translate(0px, 0px) rotateX(62.775deg) rotateY(0deg) rotateZ(0deg);}
+  21.82% {-moz-transform:translate(0px, 0px) rotateX(57.6deg) rotateY(0deg) rotateZ(0deg);}
+  23.64% {-moz-transform:translate(0px, 0px) rotateX(51.975deg) rotateY(0deg) rotateZ(0deg);}
+  25.45% {-moz-transform:translate(0px, 0px) rotateX(45.9deg) rotateY(0deg) rotateZ(0deg);}
+  27.27% {-moz-transform:translate(0px, 0px) rotateX(39.375deg) rotateY(0deg) rotateZ(0deg);}
+  29.09% {-moz-transform:translate(0px, 0px) rotateX(32.4deg) rotateY(0deg) rotateZ(0deg);}
+  30.91% {-moz-transform:translate(0px, 0px) rotateX(24.975deg) rotateY(0deg) rotateZ(0deg);}
+  32.73% {-moz-transform:translate(0px, 0px) rotateX(17.1deg) rotateY(0deg) rotateZ(0deg);}
+  34.55% {-moz-transform:translate(0px, 0px) rotateX(8.775deg) rotateY(0deg) rotateZ(0deg);}
+  36.36% {-moz-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  38.18% {-moz-transform:translate(0px, 0px) rotateX(-24.275deg) rotateY(0deg) rotateZ(0deg);}
+  40% {-moz-transform:translate(0px, 0px) rotateX(-28.1deg) rotateY(0deg) rotateZ(0deg);}
+  41.82% {-moz-transform:translate(0px, 0px) rotateX(-31.475deg) rotateY(0deg) rotateZ(0deg);}
+  43.64% {-moz-transform:translate(0px, 0px) rotateX(-34.4deg) rotateY(0deg) rotateZ(0deg);}
+  45.45% {-moz-transform:translate(0px, 0px) rotateX(-36.875deg) rotateY(0deg) rotateZ(0deg);}
+  47.27% {-moz-transform:translate(0px, 0px) rotateX(-38.9deg) rotateY(0deg) rotateZ(0deg);}
+  49.09% {-moz-transform:translate(0px, 0px) rotateX(-40.475deg) rotateY(0deg) rotateZ(0deg);}
+  50.91% {-moz-transform:translate(0px, 0px) rotateX(-41.6deg) rotateY(0deg) rotateZ(0deg);}
+  52.73% {-moz-transform:translate(0px, 0px) rotateX(-42.275deg) rotateY(0deg) rotateZ(0deg);}
+  54.55% {-moz-transform:translate(0px, 0px) rotateX(-42.5deg) rotateY(0deg) rotateZ(0deg);}
+  56.36% {-moz-transform:translate(0px, 0px) rotateX(-42.275deg) rotateY(0deg) rotateZ(0deg);}
+  58.18% {-moz-transform:translate(0px, 0px) rotateX(-41.6deg) rotateY(0deg) rotateZ(0deg);}
+  60% {-moz-transform:translate(0px, 0px) rotateX(-40.475deg) rotateY(0deg) rotateZ(0deg);}
+  61.82% {-moz-transform:translate(0px, 0px) rotateX(-38.9deg) rotateY(0deg) rotateZ(0deg);}
+  63.64% {-moz-transform:translate(0px, 0px) rotateX(-36.875deg) rotateY(0deg) rotateZ(0deg);}
+  65.45% {-moz-transform:translate(0px, 0px) rotateX(-34.4deg) rotateY(0deg) rotateZ(0deg);}
+  67.27% {-moz-transform:translate(0px, 0px) rotateX(-31.475deg) rotateY(0deg) rotateZ(0deg);}
+  69.09% {-moz-transform:translate(0px, 0px) rotateX(-28.1deg) rotateY(0deg) rotateZ(0deg);}
+  70.91% {-moz-transform:translate(0px, 0px) rotateX(-24.275deg) rotateY(0deg) rotateZ(0deg);}
+  72.73% {-moz-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  74.55% {-moz-transform:translate(0px, 0px) rotateX(-2.025deg) rotateY(0deg) rotateZ(0deg);}
+  76.36% {-moz-transform:translate(0px, 0px) rotateX(-3.6deg) rotateY(0deg) rotateZ(0deg);}
+  78.18% {-moz-transform:translate(0px, 0px) rotateX(-4.725deg) rotateY(0deg) rotateZ(0deg);}
+  80% {-moz-transform:translate(0px, 0px) rotateX(-5.4deg) rotateY(0deg) rotateZ(0deg);}
+  81.82% {-moz-transform:translate(0px, 0px) rotateX(-5.625deg) rotateY(0deg) rotateZ(0deg);}
+  83.64% {-moz-transform:translate(0px, 0px) rotateX(-5.4deg) rotateY(0deg) rotateZ(0deg);}
+  85.45% {-moz-transform:translate(0px, 0px) rotateX(-4.725deg) rotateY(0deg) rotateZ(0deg);}
+  87.27% {-moz-transform:translate(0px, 0px) rotateX(-3.6deg) rotateY(0deg) rotateZ(0deg);}
+  89.09% {-moz-transform:translate(0px, 0px) rotateX(-2.025deg) rotateY(0deg) rotateZ(0deg);}
+  90.91% {-moz-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  92.73% {-moz-transform:translate(0px, 0px) rotateX(-0.9deg) rotateY(0deg) rotateZ(0deg);}
+  94.55% {-moz-transform:translate(0px, 0px) rotateX(-1.35deg) rotateY(0deg) rotateZ(0deg);}
+  96.36% {-moz-transform:translate(0px, 0px) rotateX(-1.35deg) rotateY(0deg) rotateZ(0deg);}
+  98.18% {-moz-transform:translate(0px, 0px) rotateX(-0.9deg) rotateY(0deg) rotateZ(0deg);}
+  100% {-moz-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+}
+@-ms-keyframes stylie-keyframes {
+  0% {-ms-transform:translate(0px, 0px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);}
+  1.82% {-ms-transform:translate(0px, 0px) rotateX(89.775deg) rotateY(0deg) rotateZ(0deg);}
+  3.64% {-ms-transform:translate(0px, 0px) rotateX(89.1deg) rotateY(0deg) rotateZ(0deg);}
+  5.45% {-ms-transform:translate(0px, 0px) rotateX(87.975deg) rotateY(0deg) rotateZ(0deg);}
+  7.27% {-ms-transform:translate(0px, 0px) rotateX(86.4deg) rotateY(0deg) rotateZ(0deg);}
+  9.09% {-ms-transform:translate(0px, 0px) rotateX(84.375deg) rotateY(0deg) rotateZ(0deg);}
+  10.91% {-ms-transform:translate(0px, 0px) rotateX(81.9deg) rotateY(0deg) rotateZ(0deg);}
+  12.73% {-ms-transform:translate(0px, 0px) rotateX(78.975deg) rotateY(0deg) rotateZ(0deg);}
+  14.55% {-ms-transform:translate(0px, 0px) rotateX(75.6deg) rotateY(0deg) rotateZ(0deg);}
+  16.36% {-ms-transform:translate(0px, 0px) rotateX(71.775deg) rotateY(0deg) rotateZ(0deg);}
+  18.18% {-ms-transform:translate(0px, 0px) rotateX(67.5deg) rotateY(0deg) rotateZ(0deg);}
+  20% {-ms-transform:translate(0px, 0px) rotateX(62.775deg) rotateY(0deg) rotateZ(0deg);}
+  21.82% {-ms-transform:translate(0px, 0px) rotateX(57.6deg) rotateY(0deg) rotateZ(0deg);}
+  23.64% {-ms-transform:translate(0px, 0px) rotateX(51.975deg) rotateY(0deg) rotateZ(0deg);}
+  25.45% {-ms-transform:translate(0px, 0px) rotateX(45.9deg) rotateY(0deg) rotateZ(0deg);}
+  27.27% {-ms-transform:translate(0px, 0px) rotateX(39.375deg) rotateY(0deg) rotateZ(0deg);}
+  29.09% {-ms-transform:translate(0px, 0px) rotateX(32.4deg) rotateY(0deg) rotateZ(0deg);}
+  30.91% {-ms-transform:translate(0px, 0px) rotateX(24.975deg) rotateY(0deg) rotateZ(0deg);}
+  32.73% {-ms-transform:translate(0px, 0px) rotateX(17.1deg) rotateY(0deg) rotateZ(0deg);}
+  34.55% {-ms-transform:translate(0px, 0px) rotateX(8.775deg) rotateY(0deg) rotateZ(0deg);}
+  36.36% {-ms-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  38.18% {-ms-transform:translate(0px, 0px) rotateX(-24.275deg) rotateY(0deg) rotateZ(0deg);}
+  40% {-ms-transform:translate(0px, 0px) rotateX(-28.1deg) rotateY(0deg) rotateZ(0deg);}
+  41.82% {-ms-transform:translate(0px, 0px) rotateX(-31.475deg) rotateY(0deg) rotateZ(0deg);}
+  43.64% {-ms-transform:translate(0px, 0px) rotateX(-34.4deg) rotateY(0deg) rotateZ(0deg);}
+  45.45% {-ms-transform:translate(0px, 0px) rotateX(-36.875deg) rotateY(0deg) rotateZ(0deg);}
+  47.27% {-ms-transform:translate(0px, 0px) rotateX(-38.9deg) rotateY(0deg) rotateZ(0deg);}
+  49.09% {-ms-transform:translate(0px, 0px) rotateX(-40.475deg) rotateY(0deg) rotateZ(0deg);}
+  50.91% {-ms-transform:translate(0px, 0px) rotateX(-41.6deg) rotateY(0deg) rotateZ(0deg);}
+  52.73% {-ms-transform:translate(0px, 0px) rotateX(-42.275deg) rotateY(0deg) rotateZ(0deg);}
+  54.55% {-ms-transform:translate(0px, 0px) rotateX(-42.5deg) rotateY(0deg) rotateZ(0deg);}
+  56.36% {-ms-transform:translate(0px, 0px) rotateX(-42.275deg) rotateY(0deg) rotateZ(0deg);}
+  58.18% {-ms-transform:translate(0px, 0px) rotateX(-41.6deg) rotateY(0deg) rotateZ(0deg);}
+  60% {-ms-transform:translate(0px, 0px) rotateX(-40.475deg) rotateY(0deg) rotateZ(0deg);}
+  61.82% {-ms-transform:translate(0px, 0px) rotateX(-38.9deg) rotateY(0deg) rotateZ(0deg);}
+  63.64% {-ms-transform:translate(0px, 0px) rotateX(-36.875deg) rotateY(0deg) rotateZ(0deg);}
+  65.45% {-ms-transform:translate(0px, 0px) rotateX(-34.4deg) rotateY(0deg) rotateZ(0deg);}
+  67.27% {-ms-transform:translate(0px, 0px) rotateX(-31.475deg) rotateY(0deg) rotateZ(0deg);}
+  69.09% {-ms-transform:translate(0px, 0px) rotateX(-28.1deg) rotateY(0deg) rotateZ(0deg);}
+  70.91% {-ms-transform:translate(0px, 0px) rotateX(-24.275deg) rotateY(0deg) rotateZ(0deg);}
+  72.73% {-ms-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  74.55% {-ms-transform:translate(0px, 0px) rotateX(-2.025deg) rotateY(0deg) rotateZ(0deg);}
+  76.36% {-ms-transform:translate(0px, 0px) rotateX(-3.6deg) rotateY(0deg) rotateZ(0deg);}
+  78.18% {-ms-transform:translate(0px, 0px) rotateX(-4.725deg) rotateY(0deg) rotateZ(0deg);}
+  80% {-ms-transform:translate(0px, 0px) rotateX(-5.4deg) rotateY(0deg) rotateZ(0deg);}
+  81.82% {-ms-transform:translate(0px, 0px) rotateX(-5.625deg) rotateY(0deg) rotateZ(0deg);}
+  83.64% {-ms-transform:translate(0px, 0px) rotateX(-5.4deg) rotateY(0deg) rotateZ(0deg);}
+  85.45% {-ms-transform:translate(0px, 0px) rotateX(-4.725deg) rotateY(0deg) rotateZ(0deg);}
+  87.27% {-ms-transform:translate(0px, 0px) rotateX(-3.6deg) rotateY(0deg) rotateZ(0deg);}
+  89.09% {-ms-transform:translate(0px, 0px) rotateX(-2.025deg) rotateY(0deg) rotateZ(0deg);}
+  90.91% {-ms-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  92.73% {-ms-transform:translate(0px, 0px) rotateX(-0.9deg) rotateY(0deg) rotateZ(0deg);}
+  94.55% {-ms-transform:translate(0px, 0px) rotateX(-1.35deg) rotateY(0deg) rotateZ(0deg);}
+  96.36% {-ms-transform:translate(0px, 0px) rotateX(-1.35deg) rotateY(0deg) rotateZ(0deg);}
+  98.18% {-ms-transform:translate(0px, 0px) rotateX(-0.9deg) rotateY(0deg) rotateZ(0deg);}
+  100% {-ms-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+}
+@-o-keyframes stylie-keyframes {
+  0% {-o-transform:translate(0px, 0px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);}
+  1.82% {-o-transform:translate(0px, 0px) rotateX(89.775deg) rotateY(0deg) rotateZ(0deg);}
+  3.64% {-o-transform:translate(0px, 0px) rotateX(89.1deg) rotateY(0deg) rotateZ(0deg);}
+  5.45% {-o-transform:translate(0px, 0px) rotateX(87.975deg) rotateY(0deg) rotateZ(0deg);}
+  7.27% {-o-transform:translate(0px, 0px) rotateX(86.4deg) rotateY(0deg) rotateZ(0deg);}
+  9.09% {-o-transform:translate(0px, 0px) rotateX(84.375deg) rotateY(0deg) rotateZ(0deg);}
+  10.91% {-o-transform:translate(0px, 0px) rotateX(81.9deg) rotateY(0deg) rotateZ(0deg);}
+  12.73% {-o-transform:translate(0px, 0px) rotateX(78.975deg) rotateY(0deg) rotateZ(0deg);}
+  14.55% {-o-transform:translate(0px, 0px) rotateX(75.6deg) rotateY(0deg) rotateZ(0deg);}
+  16.36% {-o-transform:translate(0px, 0px) rotateX(71.775deg) rotateY(0deg) rotateZ(0deg);}
+  18.18% {-o-transform:translate(0px, 0px) rotateX(67.5deg) rotateY(0deg) rotateZ(0deg);}
+  20% {-o-transform:translate(0px, 0px) rotateX(62.775deg) rotateY(0deg) rotateZ(0deg);}
+  21.82% {-o-transform:translate(0px, 0px) rotateX(57.6deg) rotateY(0deg) rotateZ(0deg);}
+  23.64% {-o-transform:translate(0px, 0px) rotateX(51.975deg) rotateY(0deg) rotateZ(0deg);}
+  25.45% {-o-transform:translate(0px, 0px) rotateX(45.9deg) rotateY(0deg) rotateZ(0deg);}
+  27.27% {-o-transform:translate(0px, 0px) rotateX(39.375deg) rotateY(0deg) rotateZ(0deg);}
+  29.09% {-o-transform:translate(0px, 0px) rotateX(32.4deg) rotateY(0deg) rotateZ(0deg);}
+  30.91% {-o-transform:translate(0px, 0px) rotateX(24.975deg) rotateY(0deg) rotateZ(0deg);}
+  32.73% {-o-transform:translate(0px, 0px) rotateX(17.1deg) rotateY(0deg) rotateZ(0deg);}
+  34.55% {-o-transform:translate(0px, 0px) rotateX(8.775deg) rotateY(0deg) rotateZ(0deg);}
+  36.36% {-o-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  38.18% {-o-transform:translate(0px, 0px) rotateX(-24.275deg) rotateY(0deg) rotateZ(0deg);}
+  40% {-o-transform:translate(0px, 0px) rotateX(-28.1deg) rotateY(0deg) rotateZ(0deg);}
+  41.82% {-o-transform:translate(0px, 0px) rotateX(-31.475deg) rotateY(0deg) rotateZ(0deg);}
+  43.64% {-o-transform:translate(0px, 0px) rotateX(-34.4deg) rotateY(0deg) rotateZ(0deg);}
+  45.45% {-o-transform:translate(0px, 0px) rotateX(-36.875deg) rotateY(0deg) rotateZ(0deg);}
+  47.27% {-o-transform:translate(0px, 0px) rotateX(-38.9deg) rotateY(0deg) rotateZ(0deg);}
+  49.09% {-o-transform:translate(0px, 0px) rotateX(-40.475deg) rotateY(0deg) rotateZ(0deg);}
+  50.91% {-o-transform:translate(0px, 0px) rotateX(-41.6deg) rotateY(0deg) rotateZ(0deg);}
+  52.73% {-o-transform:translate(0px, 0px) rotateX(-42.275deg) rotateY(0deg) rotateZ(0deg);}
+  54.55% {-o-transform:translate(0px, 0px) rotateX(-42.5deg) rotateY(0deg) rotateZ(0deg);}
+  56.36% {-o-transform:translate(0px, 0px) rotateX(-42.275deg) rotateY(0deg) rotateZ(0deg);}
+  58.18% {-o-transform:translate(0px, 0px) rotateX(-41.6deg) rotateY(0deg) rotateZ(0deg);}
+  60% {-o-transform:translate(0px, 0px) rotateX(-40.475deg) rotateY(0deg) rotateZ(0deg);}
+  61.82% {-o-transform:translate(0px, 0px) rotateX(-38.9deg) rotateY(0deg) rotateZ(0deg);}
+  63.64% {-o-transform:translate(0px, 0px) rotateX(-36.875deg) rotateY(0deg) rotateZ(0deg);}
+  65.45% {-o-transform:translate(0px, 0px) rotateX(-34.4deg) rotateY(0deg) rotateZ(0deg);}
+  67.27% {-o-transform:translate(0px, 0px) rotateX(-31.475deg) rotateY(0deg) rotateZ(0deg);}
+  69.09% {-o-transform:translate(0px, 0px) rotateX(-28.1deg) rotateY(0deg) rotateZ(0deg);}
+  70.91% {-o-transform:translate(0px, 0px) rotateX(-24.275deg) rotateY(0deg) rotateZ(0deg);}
+  72.73% {-o-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  74.55% {-o-transform:translate(0px, 0px) rotateX(-2.025deg) rotateY(0deg) rotateZ(0deg);}
+  76.36% {-o-transform:translate(0px, 0px) rotateX(-3.6deg) rotateY(0deg) rotateZ(0deg);}
+  78.18% {-o-transform:translate(0px, 0px) rotateX(-4.725deg) rotateY(0deg) rotateZ(0deg);}
+  80% {-o-transform:translate(0px, 0px) rotateX(-5.4deg) rotateY(0deg) rotateZ(0deg);}
+  81.82% {-o-transform:translate(0px, 0px) rotateX(-5.625deg) rotateY(0deg) rotateZ(0deg);}
+  83.64% {-o-transform:translate(0px, 0px) rotateX(-5.4deg) rotateY(0deg) rotateZ(0deg);}
+  85.45% {-o-transform:translate(0px, 0px) rotateX(-4.725deg) rotateY(0deg) rotateZ(0deg);}
+  87.27% {-o-transform:translate(0px, 0px) rotateX(-3.6deg) rotateY(0deg) rotateZ(0deg);}
+  89.09% {-o-transform:translate(0px, 0px) rotateX(-2.025deg) rotateY(0deg) rotateZ(0deg);}
+  90.91% {-o-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  92.73% {-o-transform:translate(0px, 0px) rotateX(-0.9deg) rotateY(0deg) rotateZ(0deg);}
+  94.55% {-o-transform:translate(0px, 0px) rotateX(-1.35deg) rotateY(0deg) rotateZ(0deg);}
+  96.36% {-o-transform:translate(0px, 0px) rotateX(-1.35deg) rotateY(0deg) rotateZ(0deg);}
+  98.18% {-o-transform:translate(0px, 0px) rotateX(-0.9deg) rotateY(0deg) rotateZ(0deg);}
+  100% {-o-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+}
+@-webkit-keyframes stylie-keyframes {
+  0% {-webkit-transform:translate(0px, 0px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);}
+  1.82% {-webkit-transform:translate(0px, 0px) rotateX(89.775deg) rotateY(0deg) rotateZ(0deg);}
+  3.64% {-webkit-transform:translate(0px, 0px) rotateX(89.1deg) rotateY(0deg) rotateZ(0deg);}
+  5.45% {-webkit-transform:translate(0px, 0px) rotateX(87.975deg) rotateY(0deg) rotateZ(0deg);}
+  7.27% {-webkit-transform:translate(0px, 0px) rotateX(86.4deg) rotateY(0deg) rotateZ(0deg);}
+  9.09% {-webkit-transform:translate(0px, 0px) rotateX(84.375deg) rotateY(0deg) rotateZ(0deg);}
+  10.91% {-webkit-transform:translate(0px, 0px) rotateX(81.9deg) rotateY(0deg) rotateZ(0deg);}
+  12.73% {-webkit-transform:translate(0px, 0px) rotateX(78.975deg) rotateY(0deg) rotateZ(0deg);}
+  14.55% {-webkit-transform:translate(0px, 0px) rotateX(75.6deg) rotateY(0deg) rotateZ(0deg);}
+  16.36% {-webkit-transform:translate(0px, 0px) rotateX(71.775deg) rotateY(0deg) rotateZ(0deg);}
+  18.18% {-webkit-transform:translate(0px, 0px) rotateX(67.5deg) rotateY(0deg) rotateZ(0deg);}
+  20% {-webkit-transform:translate(0px, 0px) rotateX(62.775deg) rotateY(0deg) rotateZ(0deg);}
+  21.82% {-webkit-transform:translate(0px, 0px) rotateX(57.6deg) rotateY(0deg) rotateZ(0deg);}
+  23.64% {-webkit-transform:translate(0px, 0px) rotateX(51.975deg) rotateY(0deg) rotateZ(0deg);}
+  25.45% {-webkit-transform:translate(0px, 0px) rotateX(45.9deg) rotateY(0deg) rotateZ(0deg);}
+  27.27% {-webkit-transform:translate(0px, 0px) rotateX(39.375deg) rotateY(0deg) rotateZ(0deg);}
+  29.09% {-webkit-transform:translate(0px, 0px) rotateX(32.4deg) rotateY(0deg) rotateZ(0deg);}
+  30.91% {-webkit-transform:translate(0px, 0px) rotateX(24.975deg) rotateY(0deg) rotateZ(0deg);}
+  32.73% {-webkit-transform:translate(0px, 0px) rotateX(17.1deg) rotateY(0deg) rotateZ(0deg);}
+  34.55% {-webkit-transform:translate(0px, 0px) rotateX(8.775deg) rotateY(0deg) rotateZ(0deg);}
+  36.36% {-webkit-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  38.18% {-webkit-transform:translate(0px, 0px) rotateX(-24.275deg) rotateY(0deg) rotateZ(0deg);}
+  40% {-webkit-transform:translate(0px, 0px) rotateX(-28.1deg) rotateY(0deg) rotateZ(0deg);}
+  41.82% {-webkit-transform:translate(0px, 0px) rotateX(-31.475deg) rotateY(0deg) rotateZ(0deg);}
+  43.64% {-webkit-transform:translate(0px, 0px) rotateX(-34.4deg) rotateY(0deg) rotateZ(0deg);}
+  45.45% {-webkit-transform:translate(0px, 0px) rotateX(-36.875deg) rotateY(0deg) rotateZ(0deg);}
+  47.27% {-webkit-transform:translate(0px, 0px) rotateX(-38.9deg) rotateY(0deg) rotateZ(0deg);}
+  49.09% {-webkit-transform:translate(0px, 0px) rotateX(-40.475deg) rotateY(0deg) rotateZ(0deg);}
+  50.91% {-webkit-transform:translate(0px, 0px) rotateX(-41.6deg) rotateY(0deg) rotateZ(0deg);}
+  52.73% {-webkit-transform:translate(0px, 0px) rotateX(-42.275deg) rotateY(0deg) rotateZ(0deg);}
+  54.55% {-webkit-transform:translate(0px, 0px) rotateX(-42.5deg) rotateY(0deg) rotateZ(0deg);}
+  56.36% {-webkit-transform:translate(0px, 0px) rotateX(-42.275deg) rotateY(0deg) rotateZ(0deg);}
+  58.18% {-webkit-transform:translate(0px, 0px) rotateX(-41.6deg) rotateY(0deg) rotateZ(0deg);}
+  60% {-webkit-transform:translate(0px, 0px) rotateX(-40.475deg) rotateY(0deg) rotateZ(0deg);}
+  61.82% {-webkit-transform:translate(0px, 0px) rotateX(-38.9deg) rotateY(0deg) rotateZ(0deg);}
+  63.64% {-webkit-transform:translate(0px, 0px) rotateX(-36.875deg) rotateY(0deg) rotateZ(0deg);}
+  65.45% {-webkit-transform:translate(0px, 0px) rotateX(-34.4deg) rotateY(0deg) rotateZ(0deg);}
+  67.27% {-webkit-transform:translate(0px, 0px) rotateX(-31.475deg) rotateY(0deg) rotateZ(0deg);}
+  69.09% {-webkit-transform:translate(0px, 0px) rotateX(-28.1deg) rotateY(0deg) rotateZ(0deg);}
+  70.91% {-webkit-transform:translate(0px, 0px) rotateX(-24.275deg) rotateY(0deg) rotateZ(0deg);}
+  72.73% {-webkit-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  74.55% {-webkit-transform:translate(0px, 0px) rotateX(-2.025deg) rotateY(0deg) rotateZ(0deg);}
+  76.36% {-webkit-transform:translate(0px, 0px) rotateX(-3.6deg) rotateY(0deg) rotateZ(0deg);}
+  78.18% {-webkit-transform:translate(0px, 0px) rotateX(-4.725deg) rotateY(0deg) rotateZ(0deg);}
+  80% {-webkit-transform:translate(0px, 0px) rotateX(-5.4deg) rotateY(0deg) rotateZ(0deg);}
+  81.82% {-webkit-transform:translate(0px, 0px) rotateX(-5.625deg) rotateY(0deg) rotateZ(0deg);}
+  83.64% {-webkit-transform:translate(0px, 0px) rotateX(-5.4deg) rotateY(0deg) rotateZ(0deg);}
+  85.45% {-webkit-transform:translate(0px, 0px) rotateX(-4.725deg) rotateY(0deg) rotateZ(0deg);}
+  87.27% {-webkit-transform:translate(0px, 0px) rotateX(-3.6deg) rotateY(0deg) rotateZ(0deg);}
+  89.09% {-webkit-transform:translate(0px, 0px) rotateX(-2.025deg) rotateY(0deg) rotateZ(0deg);}
+  90.91% {-webkit-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  92.73% {-webkit-transform:translate(0px, 0px) rotateX(-0.9deg) rotateY(0deg) rotateZ(0deg);}
+  94.55% {-webkit-transform:translate(0px, 0px) rotateX(-1.35deg) rotateY(0deg) rotateZ(0deg);}
+  96.36% {-webkit-transform:translate(0px, 0px) rotateX(-1.35deg) rotateY(0deg) rotateZ(0deg);}
+  98.18% {-webkit-transform:translate(0px, 0px) rotateX(-0.9deg) rotateY(0deg) rotateZ(0deg);}
+  100% {-webkit-transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+}
+@keyframes stylie-keyframes {
+  0% {transform:translate(0px, 0px) rotateX(90deg) rotateY(0deg) rotateZ(0deg);}
+  1.82% {transform:translate(0px, 0px) rotateX(89.775deg) rotateY(0deg) rotateZ(0deg);}
+  3.64% {transform:translate(0px, 0px) rotateX(89.1deg) rotateY(0deg) rotateZ(0deg);}
+  5.45% {transform:translate(0px, 0px) rotateX(87.975deg) rotateY(0deg) rotateZ(0deg);}
+  7.27% {transform:translate(0px, 0px) rotateX(86.4deg) rotateY(0deg) rotateZ(0deg);}
+  9.09% {transform:translate(0px, 0px) rotateX(84.375deg) rotateY(0deg) rotateZ(0deg);}
+  10.91% {transform:translate(0px, 0px) rotateX(81.9deg) rotateY(0deg) rotateZ(0deg);}
+  12.73% {transform:translate(0px, 0px) rotateX(78.975deg) rotateY(0deg) rotateZ(0deg);}
+  14.55% {transform:translate(0px, 0px) rotateX(75.6deg) rotateY(0deg) rotateZ(0deg);}
+  16.36% {transform:translate(0px, 0px) rotateX(71.775deg) rotateY(0deg) rotateZ(0deg);}
+  18.18% {transform:translate(0px, 0px) rotateX(67.5deg) rotateY(0deg) rotateZ(0deg);}
+  20% {transform:translate(0px, 0px) rotateX(62.775deg) rotateY(0deg) rotateZ(0deg);}
+  21.82% {transform:translate(0px, 0px) rotateX(57.6deg) rotateY(0deg) rotateZ(0deg);}
+  23.64% {transform:translate(0px, 0px) rotateX(51.975deg) rotateY(0deg) rotateZ(0deg);}
+  25.45% {transform:translate(0px, 0px) rotateX(45.9deg) rotateY(0deg) rotateZ(0deg);}
+  27.27% {transform:translate(0px, 0px) rotateX(39.375deg) rotateY(0deg) rotateZ(0deg);}
+  29.09% {transform:translate(0px, 0px) rotateX(32.4deg) rotateY(0deg) rotateZ(0deg);}
+  30.91% {transform:translate(0px, 0px) rotateX(24.975deg) rotateY(0deg) rotateZ(0deg);}
+  32.73% {transform:translate(0px, 0px) rotateX(17.1deg) rotateY(0deg) rotateZ(0deg);}
+  34.55% {transform:translate(0px, 0px) rotateX(8.775deg) rotateY(0deg) rotateZ(0deg);}
+  36.36% {transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  38.18% {transform:translate(0px, 0px) rotateX(-24.275deg) rotateY(0deg) rotateZ(0deg);}
+  40% {transform:translate(0px, 0px) rotateX(-28.1deg) rotateY(0deg) rotateZ(0deg);}
+  41.82% {transform:translate(0px, 0px) rotateX(-31.475deg) rotateY(0deg) rotateZ(0deg);}
+  43.64% {transform:translate(0px, 0px) rotateX(-34.4deg) rotateY(0deg) rotateZ(0deg);}
+  45.45% {transform:translate(0px, 0px) rotateX(-36.875deg) rotateY(0deg) rotateZ(0deg);}
+  47.27% {transform:translate(0px, 0px) rotateX(-38.9deg) rotateY(0deg) rotateZ(0deg);}
+  49.09% {transform:translate(0px, 0px) rotateX(-40.475deg) rotateY(0deg) rotateZ(0deg);}
+  50.91% {transform:translate(0px, 0px) rotateX(-41.6deg) rotateY(0deg) rotateZ(0deg);}
+  52.73% {transform:translate(0px, 0px) rotateX(-42.275deg) rotateY(0deg) rotateZ(0deg);}
+  54.55% {transform:translate(0px, 0px) rotateX(-42.5deg) rotateY(0deg) rotateZ(0deg);}
+  56.36% {transform:translate(0px, 0px) rotateX(-42.275deg) rotateY(0deg) rotateZ(0deg);}
+  58.18% {transform:translate(0px, 0px) rotateX(-41.6deg) rotateY(0deg) rotateZ(0deg);}
+  60% {transform:translate(0px, 0px) rotateX(-40.475deg) rotateY(0deg) rotateZ(0deg);}
+  61.82% {transform:translate(0px, 0px) rotateX(-38.9deg) rotateY(0deg) rotateZ(0deg);}
+  63.64% {transform:translate(0px, 0px) rotateX(-36.875deg) rotateY(0deg) rotateZ(0deg);}
+  65.45% {transform:translate(0px, 0px) rotateX(-34.4deg) rotateY(0deg) rotateZ(0deg);}
+  67.27% {transform:translate(0px, 0px) rotateX(-31.475deg) rotateY(0deg) rotateZ(0deg);}
+  69.09% {transform:translate(0px, 0px) rotateX(-28.1deg) rotateY(0deg) rotateZ(0deg);}
+  70.91% {transform:translate(0px, 0px) rotateX(-24.275deg) rotateY(0deg) rotateZ(0deg);}
+  72.73% {transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  74.55% {transform:translate(0px, 0px) rotateX(-2.025deg) rotateY(0deg) rotateZ(0deg);}
+  76.36% {transform:translate(0px, 0px) rotateX(-3.6deg) rotateY(0deg) rotateZ(0deg);}
+  78.18% {transform:translate(0px, 0px) rotateX(-4.725deg) rotateY(0deg) rotateZ(0deg);}
+  80% {transform:translate(0px, 0px) rotateX(-5.4deg) rotateY(0deg) rotateZ(0deg);}
+  81.82% {transform:translate(0px, 0px) rotateX(-5.625deg) rotateY(0deg) rotateZ(0deg);}
+  83.64% {transform:translate(0px, 0px) rotateX(-5.4deg) rotateY(0deg) rotateZ(0deg);}
+  85.45% {transform:translate(0px, 0px) rotateX(-4.725deg) rotateY(0deg) rotateZ(0deg);}
+  87.27% {transform:translate(0px, 0px) rotateX(-3.6deg) rotateY(0deg) rotateZ(0deg);}
+  89.09% {transform:translate(0px, 0px) rotateX(-2.025deg) rotateY(0deg) rotateZ(0deg);}
+  90.91% {transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+  92.73% {transform:translate(0px, 0px) rotateX(-0.9deg) rotateY(0deg) rotateZ(0deg);}
+  94.55% {transform:translate(0px, 0px) rotateX(-1.35deg) rotateY(0deg) rotateZ(0deg);}
+  96.36% {transform:translate(0px, 0px) rotateX(-1.35deg) rotateY(0deg) rotateZ(0deg);}
+  98.18% {transform:translate(0px, 0px) rotateX(-0.9deg) rotateY(0deg) rotateZ(0deg);}
+  100% {transform:translate(0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);}
+}
