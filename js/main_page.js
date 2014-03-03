@@ -73,7 +73,6 @@ $(document).ready( function () {
         }
     function loadPage_1()
     {
-        console.log("enter L1" );
         LP1_bool = false;
         LP2_bool = true;
         $('#prePage').height(0);
