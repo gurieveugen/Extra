@@ -74,6 +74,11 @@ $(document).ready( function () {
     function loadPage_1()
     {        
         //console.log("enter L1" );
+//        if (LP2_bool)
+//        {
+//            $('.myfixedContent').scrollTop(0);        
+//        }
+        
         LP1_bool = false;
         LP2_bool = true;
         $('#prePage').height(0);
@@ -107,16 +112,25 @@ $(document).ready( function () {
              });
         });
         
-        $('.myfixedContent').bind('scroll', bindScroll);
+        //$('.myfixedContent').bind('scroll', bindScroll);
     }
     
     function loadPage_2()
     {
+        if (LP3_bool)
+        {    
+            $('.myfixedContent').scrollTop(300);
+            $('#prePage').height(300);        
+        }
+        else
+        {
+            $('#prePage').height($('.myfixedContent').scrollTop()-50);
+        }
         LP1_bool = true;
         LP2_bool = false;
         LP3_bool = true;
-        $('#prePage').height(100);
-        $('.myfixedContent').scrollTop(100);
+//        $('#prePage').height(300);
+//        $('.myfixedContent').scrollTop(300);
         $('#PageSCRL_1').stop(true,true).hide();
             $('#red-white').attr({class:'red-white pull-right'});
             $('#red-white').stop(true,true).hide();
@@ -166,16 +180,26 @@ $(document).ready( function () {
             $('#tv-front').fadeTo(10,1).delay(8000).fadeOut(1500);
         });
         
-        $('.myfixedContent').bind('scroll', bindScroll);
+        //$('.myfixedContent').bind('scroll', bindScroll);
+        
     }
     
     function loadPage_3()
     {
+        if (LP4_bool)
+        {   
+            $('.myfixedContent').scrollTop(600);
+            $('#prePage').height(600);        
+        }
+        else
+        {
+            $('#prePage').height($('.myfixedContent').scrollTop()-50);
+        }
         LP4_bool = true;
         LP3_bool = false;
         LP2_bool = true;
-        $('#prePage').height(200);
-        $('.myfixedContent').scrollTop(200);
+        //$('#prePage').height(600);
+//        $('.myfixedContent').scrollTop(600);
         $('#PageSCRL_2').stop(true,true).hide();
             $('#player3423').stop(true,true).hide();
             $('#search').stop(true,true).hide();
@@ -225,15 +249,16 @@ $(document).ready( function () {
             });
         });
         
-        $('.myfixedContent').bind('scroll', bindScroll);
+        //$('.myfixedContent').bind('scroll', bindScroll);
+        
     }
     
     function loadPage_4()
     {
         LP3_bool = true;
         LP4_bool = false;
-        $('#prePage').height(300);
-        $('.myfixedContent').scrollTop(300);
+        $('#prePage').height(900);
+        $('.myfixedContent').scrollTop(900);
         $('#PageSCRL_3').stop(true,true).hide();
         $('#menuR').stop(true,true).hide();
             $('#menuR').stop(true,true).hide();
@@ -278,31 +303,33 @@ $(document).ready( function () {
             });
         });
         
-        $('.myfixedContent').bind('scroll', bindScroll);
+        //$('.myfixedContent').bind('scroll', bindScroll);
+        
     }
 
     function bindScroll()
     {
-        if( $('.myfixedContent').scrollTop() < 100 && LP1_bool ) 
+        //console.log("Top1=%s", $('.myfixedContent').scrollTop() );
+        if( $('.myfixedContent').scrollTop() < 300 && LP1_bool ) 
         {
             //console.log("Top1=%s", $('.myfixedContent').scrollTop() );
-            $('.myfixedContent').unbind('scroll');
+            //$('.myfixedContent').unbind('scroll');
             loadPage_1();
         }
-        if( $('.myfixedContent').scrollTop() > 100 && $('.myfixedContent').scrollTop() < 200 && LP2_bool) 
+        if( $('.myfixedContent').scrollTop() >= 300 && $('.myfixedContent').scrollTop() < 600 && LP2_bool) 
         {
             //console.log("Top2=%s", $('.myfixedContent').scrollTop() );
-            $('.myfixedContent').unbind('scroll');
+            //$('.myfixedContent').unbind('scroll');
             loadPage_2();            
         }
-        if( $('.myfixedContent').scrollTop() > 200 && $('.myfixedContent').scrollTop() < 300 && LP3_bool) 
+        if( $('.myfixedContent').scrollTop() >= 600 && $('.myfixedContent').scrollTop() < 900 && LP3_bool) 
         {
-            $('.myfixedContent').unbind('scroll');
+            //$('.myfixedContent').unbind('scroll');
             loadPage_3();
         }
-        if( $('.myfixedContent').scrollTop() > 300  && LP4_bool) 
+        if( $('.myfixedContent').scrollTop() >= 900  && LP4_bool) 
         {
-            $('.myfixedContent').unbind('scroll');
+            //$('.myfixedContent').unbind('scroll');
             loadPage_4();
         }
     }
@@ -313,11 +340,27 @@ $(document).ready( function () {
     //var myfixedContentH = $('#scr_1').height() + 500;
     //$('#scr_1').height(myfixedContentH);
     //alert($('#scr_1').height());
+    var ms=90;
+    function throttle(ms, callback) {
+    var timer, lastCall=0;
+
+    return function() {
+        var now = new Date().getTime(),
+            diff = now - lastCall;
+        console.log(diff, now, lastCall);
+        if (diff >= ms) {
+            console.log("Call callback!");
+            lastCall = now;
+            callback.apply(this, arguments);
+        }
+    };
+}
     
-    
-    $('.myfixedContent').scroll(function() {           
+    $('.myfixedContent').scroll( 
+        throttle(ms , function() {           
         bindScroll();
-    });
+        }) 
+    );
     
 });
 
