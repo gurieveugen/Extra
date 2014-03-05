@@ -103,7 +103,8 @@ body{
     bottom:70px;
     right: 0;
     left: 0;
-    overflow-y: auto;  
+    overflow-y: auto;
+    z-index:9; 
 }
 .myContent
 {
@@ -155,17 +156,41 @@ body{
     /*transform: rotateY(90deg);*/
     display: none;
 }
-/*.myContent div.red-white-rr
+
+
+.myContent a.red-white,
+.myContent a.red-whiteS
 {
     background-color: #F1533C;
     color: #FFFFFF;
-    font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
-    font-size: 46px;
-    line-height: 40px;
-    padding: 7px 10px;  
-    margin-bottom: 10px;
-    display: inline-block;
-}*/
+    display: none;
+    text-decoration: none;
+    width: 100%;
+}
+.myContent a.red-white:hover
+{
+    /*background-color: #F5988A;*/
+    background-color: transparent;
+    color: #F1533C;   
+}
+.myContent a.red-whiteS:hover
+{
+    background-color: #FFF;
+    color: #F1533C;
+}
+.myContent a.white-red
+{
+    background-color: #FFFFFF;
+    color: #F1533C;
+    display: none;
+    text-decoration: none;
+    width: 100%;
+}
+.myContent a.white-red:hover
+{
+    background-color: transparent;
+    color: #FFFFFF;
+}
 
 .myContent div.red-white
 {
@@ -188,10 +213,10 @@ body{
 .myContent div#krug_scroll
 {
     opacity: 0;
-    background-image: url('/img/krug_scroll.png');
+    /*background-image: url('/img/arrow.gif');*/
     width: 75px;
     height: 75px;
-    background-color: red;
+    background-color: transparent;
     margin: 0 auto 0;
 }
 .myContent div#PageSCRL_1
@@ -199,6 +224,11 @@ body{
     display: none;
 }
 .myContent div#PageSCRL_2
+{
+    display: none;
+    position:relative;
+}
+.myContent div#PageSCRL_3
 {
     display: none;
     position:relative;
@@ -412,19 +442,67 @@ body{
 @media (max-width: 550px) {
 
     /*Begin Animation iPhone*/
-    .myContent div#iphone5
+    .myContent div#iphone5,
+    .myContent div#iphone5S,
+    div#iphone5,
+    div#iphone5S
     {
         background-color: transparent; 
-        margin-top: 0px; 
-        z-index:20;
+        /*margin-top: 0px; */
+        top:110px;
+        left:15%;
+        z-index:4;
         position:absolute;
         display: none;        
-        margin-left: 15%;
+        /*margin-left: 15%;*/
         width: 60%;
     }
-    .myContent div#iphone5>img
+    .myContent div#iphone5>img,
+    .myContent div#iphone5S>img,
+    div#iphone5>img,
+    div#iphone5S>img    
     {
         width: 50%;
+    }
+    .myContent div#search,
+    div#search
+    {
+        background-color: transparent; 
+        /*margin-top: 0px; */
+        top:110px;
+        left:15%; 
+        z-index:3;
+        position:absolute;
+        /*margin-left: 15%;*/        
+        width: 60%;
+        display: none;
+    }
+    .myContent div#search>img,
+    div#search>img
+    {
+        width: 50%;
+    }
+    .myContent div#Reflector,
+    .myContent div#ReflectorS,
+    div#Reflector
+    {
+        background-color: transparent; 
+        /*margin-top: 40px;*/
+        top:160px;
+        left:14.333333333333332%;
+        z-index:3;
+        position:absolute;
+        /*margin-left: 17%;*/        
+        /*width: 25%;*/
+        width: 150px;
+        display: none;    
+    }
+    .myContent div#Reflector > #swfReflector,
+    .myContent div#ReflectorS > #swfReflectorS,
+    div#Reflector > #swfReflector
+    {
+        width: 150px;
+        height: 200px;
     }
     .myContent div#volna
     {
@@ -452,13 +530,45 @@ body{
     }
     .myContent div#tv-front
     {
-        background-color: green;
+        background-color: transparent;
         margin: 335px auto 0px;
         /*margin-top: 325px;*/
         z-index:10;
         /*position:absolute;*/
         /*margin-left: 20%;*/
         width: 70%;
+    }
+    .myContent div#menuR
+    {
+        background-color: transparent;
+        margin-top: 330px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+        width: 60%;
+        margin-left: 11%;
+    }
+    .myContent div#subscribe
+    {
+        background-color: transparent;
+        margin-top: 350px;
+        z-index:10;
+        width: 60%;
+        margin-left: 11%;
+        /*position:absolute;*/
+        display: none;
+    }
+    .myContent #subscribe_1.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 27px;
+        line-height: 60px;
+        padding: 7px 10px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;        
+        border-bottom: 5px solid #FFF;
     }
     /*Begin Animation iPhone*/
     .myContent div.stylie
@@ -471,24 +581,85 @@ body{
         display: inline-block;
         text-align: right;
     }
+    .myContent a.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 27px;
+        line-height: 23px;
+        padding: 3px 3px;  
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    #myswf
+    {
+        display:none;
+    }
 }
 
 @media (min-width: 550px) and (max-width: 650px) {
 
     /*Begin Animation iPhone*/
-    .myContent div#iphone5
+    .myContent div#iphone5,
+    .myContent div#iphone5S,
+    div#iphone5,
+    div#iphone5S
     {
         background-color: transparent; 
-        margin-top: 0px; 
-        z-index:20;
+        /*margin-top: 0px; */
+        top:110px;
+        left:20%;
+        z-index:4;
         position:absolute;
         display: none;        
-        margin-left: 20%;
-        width: 50%;
+        /*margin-left: 20%;*/
+        width: 48%;
     }
-    .myContent div#iphone5>img
+    .myContent div#iphone5>img,
+    .myContent div#iphone5S>img,
+        div#iphone5>img,
+    div#iphone5S>img
     {
         width: 50%;
+    }
+    .myContent div#search,
+    div#search
+    {
+        background-color: transparent; 
+        /*margin-top: 0px; */
+        top:110px;
+        left:20%;
+        z-index:3;
+        position:absolute;
+        /*margin-left: 20%;*/        
+        width: 48%;
+        display: none;    
+    }
+    .myContent div#search>img,
+    div#search>img
+    {
+        width: 50%;
+    }
+    .myContent div#Reflector,
+    .myContent div#ReflectorS,
+    div#Reflector
+    {
+        background-color: transparent; 
+        /*margin-top: 50px;*/
+        top:160px;
+        left:20.333333333333332%;
+        z-index:3;
+        position:absolute;
+        /*margin-left: 23%;*/        
+        /*width: 25%;*/
+        width: 150px;
+        display: none;    
+    }
+    .myContent div#Reflector > #swfReflector,
+    .myContent div#ReflectorS > #swfReflectorS,
+    div#Reflector > #swfReflector
+    {
+        width: 150px;
+        height: 200px;
     }
     .myContent div#volna
     {
@@ -516,13 +687,45 @@ body{
     }
     .myContent div#tv-front
     {
-        background-color: green;
-        margin: 335px auto 0px;
+        background-color: transparent;
+        margin: 320px auto 0px;
         /*margin-top: 325px;*/
         z-index:10;
         /*position:absolute;*/
         /*margin-left: 20%;*/
         width: 60%;
+    }
+    .myContent div#menuR
+    {
+        background-color: transparent;
+        margin-top: 320px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+        width: 50%;
+        margin-left: 17%;
+    }
+    .myContent div#subscribe
+    {
+        background-color: transparent;
+        margin-top: 350px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+        width: 50%;
+        margin-left: 17%;
+    }
+    .myContent #subscribe_1.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 27px;
+        line-height: 60px;
+        padding: 7px 10px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;        
+        border-bottom: 5px solid #FFF;
     }
     /*Begin Animation iPhone*/
     .myContent div.stylie
@@ -535,24 +738,84 @@ body{
         display: inline-block;
         text-align: right;
     }
+    .myContent a.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 27px;
+        line-height: 23px;
+        padding: 3px 3px;  
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    #myswf
+    {
+        display:none;
+    }
 
 }
 @media (min-width: 650px) and (max-width: 768px)
 {
     /*Begin Animation iPhone*/
-    .myContent div#iphone5
+    .myContent div#iphone5,
+    .myContent div#iphone5S,
+    div#iphone5,
+    div#iphone5S
     {
         background-color: transparent; 
-        margin-top: 5px; 
-        z-index:20;
+        /*margin-top: 5px;*/ 
+        top:110px;
+        left:5%;
+        z-index:4;
         position:absolute;
         display: none;        
-        margin-left: 5%;
+        /*margin-left: 5%;*/
         width: 25%;
     }
-    .myContent div#iphone5>img
+    .myContent div#iphone5>img,
+    .myContent div#iphone5S>img,
+        div#iphone5>img,
+    div#iphone5S>img
     {
         width: 100%;
+    }
+    .myContent div#search,
+    div#search
+    {
+        background-color: transparent; 
+        /*margin-top: 5px;*/ 
+        top:110px;
+        left:5%; 
+        z-index:3;
+        position:absolute;
+        /*margin-left: 5%;*/        
+        width: 25%;
+        display: none;    
+    }
+    .myContent div#search>img,
+    div#search>img
+    {
+        width: 100%;
+    }
+    .myContent div#Reflector,
+    .myContent div#ReflectorS,
+    div#Reflector
+    {
+        background-color: transparent; 
+        /*margin-top: 65px;*/ 
+        top:180px;
+        left:3.333333333333332%;
+        z-index:3;
+        position:absolute;
+        /*margin-left: 5%;*/        
+        width: 210px;
+        display: none;    
+    }
+    .myContent div#Reflector > #swfReflector,
+    .myContent div#ReflectorS > #swfReflectorS,
+    div#Reflector > #swfReflector
+    {
+        width: 210px;
+        height: 250px;
     }
     .myContent div#volna
     {
@@ -580,12 +843,44 @@ body{
     }
     .myContent div#tv-front
     {
-        background-color: white;
+        background-color: transparent;
         margin-top: 100px;
         z-index:10;
         position:absolute;
         margin-left: 50%;
         width: 40%;
+    }
+    .myContent div#menuR
+    {
+        background-color: transparent;
+        margin-top: 50px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+        width: 50%;
+        margin-left: 40%;
+    }
+    .myContent div#subscribe
+    {
+        background-color: transparent;
+        margin-top: 50px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+        width: 50%;
+        margin-left: 40%;
+    }
+    .myContent #subscribe_1.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 34px;
+        line-height: 70px;
+        padding: 7px 10px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;        
+        border-bottom: 5px solid #FFF;
     }
     /*Begin Animation iPhone*/
 
@@ -598,7 +893,20 @@ body{
         margin-bottom: 10px;
         display: inline-block;
         text-align: right;
-    } 
+    }
+    .myContent a.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 32px;
+        line-height: 28px;
+        padding: 4px 4px;  
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    #myswf
+    {
+        display:none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -706,17 +1014,62 @@ body{
         line-height: 40px;       
     }
       /*Begin Animation iPhone*/
-    .myContent div#iphone5
+    .myContent div#iphone5,
+    .myContent div#iphone5S,
+    div#iphone5,
+    div#iphone5S
     {
         background-color: transparent; 
-        margin-top: 10px; 
-        z-index:20;
+        /*margin-top: 10px;*/ 
+        top:120px;
+        left:8.333333333333332%;
+        z-index:4;
         position:absolute;
         display: none;    
     }
-    .myContent div#iphone5>img
+    .myContent div#iphone5>img,
+    .myContent div#iphone5S>img,
+        div#iphone5>img,
+    div#iphone5S>img
     {
         width: 200px;
+    }
+    .myContent div#search,
+    div#search
+    {
+        background-color: transparent; 
+        /*margin-top: 10px;*/ 
+        top:120px;
+        left:8.333333333333332%; 
+        z-index:3;
+        position:absolute;        
+        width: 200px;
+        display: none;    
+    }
+    .myContent div#search>img,
+    div#search>img
+    {
+        width: 200px;
+    }
+    .myContent div#Reflector,
+    .myContent div#ReflectorS,
+    div#Reflector
+    {
+        background-color: transparent; 
+        /*margin-top: 70px;*/
+        top:180px;
+        left:8.333333333333332%;
+        z-index:3;
+        position:absolute;        
+        width: 200px;
+        display: none;    
+    }
+    .myContent div#Reflector > #swfReflector,
+    .myContent div#ReflectorS > #swfReflectorS,
+    div#Reflector > #swfReflector
+    {
+        width: 200px;
+        height: 300px;
     }
     .myContent div#volna
     {
@@ -743,10 +1096,38 @@ body{
     }
     .myContent div#tv-front
     {
-        background-color: blue;
+        background-color: transparent;
         margin-top: 120px;
         z-index:10;
         position:absolute;
+    }
+    .myContent div#menuR
+    {
+        background-color: transparent;
+        margin-top: 80px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+    }
+    .myContent div#subscribe
+    {
+        background-color: transparent;
+        margin-top: 80px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+    }
+    .myContent #subscribe_1.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 40px;
+        line-height: 90px;
+        padding: 7px 10px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;        
+        border-bottom: 5px solid #FFF;
     }
     /*Begin Animation iPhone*/
 
@@ -759,7 +1140,20 @@ body{
         margin-bottom: 10px;
         display: inline-block;
         text-align: right;
-    } 
+    }
+    .myContent a.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 40px;
+        line-height: 35px;
+        padding: 5px 5px;  
+        margin-bottom: 10px;
+        display: inline-block;    
+    }
+    #bgMobile
+    {
+        display: none;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -774,17 +1168,62 @@ body{
         width: 21px;
     }
       /*Begin Animation iPhone*/
-    .myContent div#iphone5
+    .myContent div#iphone5,
+    .myContent div#iphone5S,
+    div#iphone5,
+    div#iphone5S
     {
         background-color: transparent; 
-        margin-top: 20px; 
-        z-index:20;
+        /*margin-top: 20px; */
+        top:120px;
+        left:8.333333333333332%;
+        z-index:4;
         position:absolute;
         display: none;    
     }
-    .myContent div#iphone5>img
+    .myContent div#iphone5>img,
+    .myContent div#iphone5S>img,
+        div#iphone5>img,
+    div#iphone5S>img
     {
         width: 230px;
+    }
+    .myContent div#search,
+    div#search
+    {
+        background-color: transparent; 
+        /*margin-top: 20px; */
+        top:120px;
+        left:8.333333333333332%;
+        z-index:3;
+        position:absolute;        
+        width: 230px;
+        display: none;    
+    }
+    .myContent div#search>img,
+    div#search>img
+    {
+        width: 230px;
+    }
+    .myContent div#Reflector,
+    .myContent div#ReflectorS,
+    div#Reflector
+    {
+        background-color: transparent; 
+        /*margin-top: 90px;*/
+        top:190px;
+        left:8.333333333333332%;
+        z-index:3;
+        position:absolute;        
+        width: 230px;
+        display: none;    
+    }
+    .myContent div#Reflector > #swfReflector,
+    .myContent div#ReflectorS > #swfReflectorS,
+    div#Reflector > #swfReflector
+    {
+        width: 230px;
+        height: 340px;
     }
     .myContent div#volna
     {
@@ -811,10 +1250,38 @@ body{
     }
     .myContent div#tv-front
     {
-        background-color: yellow;
+        background-color: transparent;
         margin-top: 130px;
         z-index:10;
         position:absolute;
+    }
+    .myContent div#menuR
+    {
+        background-color: transparent;
+        margin-top: 100px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+    }
+    .myContent div#subscribe
+    {
+        background-color: transparent;
+        margin-top: 100px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+    }
+    .myContent #subscribe_1.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 40px;
+        line-height: 90px;
+        padding: 7px 10px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;        
+        border-bottom: 5px solid #FFF;
     }
     /*Begin Animation iPhone*/
     .myContent div.stylie
@@ -826,22 +1293,83 @@ body{
         margin-bottom: 10px;
         display: inline-block;
         text-align: right;
-    } 
+    }
+    .myContent a.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 40px;
+        line-height: 35px;
+        padding: 5px 5px;  
+        margin-bottom: 10px;
+        display: inline-block;        
+    }
+    #bgMobile
+    {
+        display: none;
+    }
 }
 @media (min-width: 1200px) and (max-width: 1399px) {
     /*Begin Animation iPhone*/
-    .myContent div#iphone5
+    .myContent div#iphone5,
+    .myContent div#iphone5S,
+    div#iphone5,
+    div#iphone5S
     {
         background-color: transparent; 
-        margin-top: 10px; 
-        z-index:20;
-        position:absolute;
+        /*margin-top: 10px;*/
+        top:120px;
+        left:8.333333333333332%;
+        z-index:4;
+        position:absolute;        
         display: none;    
     }
-    .myContent div#iphone5>img
+    .myContent div#iphone5>img,
+    .myContent div#iphone5S>img,
+        div#iphone5>img,
+    div#iphone5S>img
     {
         width: 250px;
     }
+    .myContent div#search,
+    div#search
+    {
+        background-color: transparent; 
+        /*margin-top: 10px;*/ 
+        top:120px;
+        left:8.333333333333332%; 
+        z-index:3;
+        position:absolute;        
+        width: 250px;
+        display: none;    
+    }
+    .myContent div#search>img,
+    div#search>img
+    {
+        width: 250px;
+    }
+    
+    .myContent div#Reflector,
+    .myContent div#ReflectorS,
+    div#Reflector
+    {
+        background-color: transparent; 
+        /*margin-top: 85px;*/
+        top:200px;
+        left:8.333333333333332%; 
+        z-index:3;
+        position:absolute;        
+        width: 250px;
+        display: none;    
+    }
+    .myContent div#Reflector > #swfReflector,
+    .myContent div#ReflectorS > #swfReflectorS,
+    div#Reflector > #swfReflector
+    {
+        width: 250px;
+        height: 370px;
+    }
+    
+    
     .myContent div#volna
     {
         width: 27%;
@@ -866,10 +1394,38 @@ body{
     }
     .myContent div#tv-front
     {
-        background-color: red;
+        background-color: transparent;
         margin-top: 110px;
         z-index:10;
         position:absolute;
+    }
+    .myContent div#menuR
+    {
+        background-color: transparent;
+        margin-top: 100px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+    }
+    .myContent div#subscribe
+    {
+        background-color: transparent;
+        margin-top: 100px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+    }
+    .myContent #subscribe_1.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 46px;
+        line-height: 100px;
+        padding: 7px 10px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;        
+        border-bottom: 5px solid #FFF;
     }
     /*Begin Animation iPhone*/
 
@@ -882,21 +1438,83 @@ body{
         margin-bottom: 10px;
         display: inline-block;
     }
+    .myContent a.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 46px;
+        line-height: 40px;
+        padding: 7px 10px;  
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    #bgMobile
+    {
+        display: none;
+    }
 }
 @media (min-width: 1400px) {
       .container {
         width: 1370px;
       }
       /*Begin Animation iPhone*/
-    .myContent div#iphone5
+    .myContent div#iphone5,
+    .myContent div#iphone5S,
+    div#iphone5,
+    div#iphone5S
     {
         background-color: transparent; 
-        margin-top: 10px; 
-        z-index:20;
+        /*margin-top: 10px;*/
+        top:130px;
+        left:8.333333333333332%;
+        z-index:4;
+        position:absolute;                 
+        width: 250px;
+        display: none;
+    }
+    .myContent div#iphone5>img,
+    .myContent div#iphone5S>img,
+        div#iphone5>img,
+    div#iphone5S>img
+    {
+        width: 250px;
+    }
+    .myContent div#search,
+    div#search
+    {
+        background-color: transparent; 
+        /*margin-top: 10px;*/ 
+        top:130px;
+        left:8.333333333333332%;
+        z-index:3;
         position:absolute;
+        display: none;
+        width: 250px;    
+    }
+    .myContent div#search>img,
+    div#search>img
+    {
+        width: 250px;
+    }
+    .myContent div#Reflector,
+    .myContent div#ReflectorS,
+    div#Reflector
+    {
+        background-color: transparent; 
+        /*margin-top: 85px; */
+        top:210px;
+        left:8.333333333333332%;
+        z-index:3;
+        position:absolute;        
+        width: 250px;
         display: none;    
     }
-    
+    .myContent div#Reflector > #swfReflector,
+    .myContent div#ReflectorS > #swfReflectorS,
+    div#Reflector > #swfReflector
+    {
+        width: 250px;
+        height: 370px;
+    }
     .myContent div#volna
     {
         width: 27%;
@@ -910,11 +1528,6 @@ body{
     {
         width:100%;
     }
-    
-    .myContent div#iphone5>img
-    {
-        width: 250px;
-    }
     .myContent div#player3423
     {    
         width: 38%;
@@ -926,10 +1539,38 @@ body{
     }
     .myContent div#tv-front
     {
-        background-color: aqua;
+        background-color: transparent;
         margin-top: 90px;
         z-index:10;
         position:absolute;
+    }
+    .myContent div#menuR
+    {
+        background-color: transparent;
+        margin-top: 100px;
+        z-index:10;
+        /*position:absolute;*/
+        display: none;
+    }
+    .myContent div#subscribe
+    {
+        background-color: transparent;
+        margin-top: 100px;
+        z-index:30;
+        /*position:absolute;*/
+        display: none;
+    }
+    .myContent #subscribe_1.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 46px;
+        line-height: 100px;
+        padding: 7px 10px;  
+        margin-bottom: 10px;
+        display: inline-block;
+        text-align: center;
+        font-weight: bold;        
+        border-bottom: 5px solid #FFF;
     }
     /*Begin Animation iPhone*/
     
@@ -941,6 +1582,19 @@ body{
         padding: 7px 10px;  
         margin-bottom: 10px;
         display: inline-block;
+    }
+    .myContent a.stylie
+    {
+        font-family: Eurostile, Helvetica Neue, Helvetica, Arial, sans-serif;    
+        font-size: 46px;
+        line-height: 40px;
+        padding: 7px 10px;  
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+    #bgMobile
+    {
+        display: none;
     }
   
 }
@@ -971,9 +1625,16 @@ body{
 }
 .mybackground_swf
 {
-    /*overflow: hidden;*/
 }
-
+.footerSlideImg
+{
+    z-index:5;
+    overflow: auto;    
+}
+#footerSlideImg
+{
+    display: none;
+}
 
 
 

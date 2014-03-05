@@ -1,12 +1,12 @@
 $(document).ready( function () {
-    
+    var TU = $('#template_url').attr('data-url');
     //alert($(window).height() + '_' + $(window).width());
     $("#on_off").on('click', function(){
           var act = $("#sound").attr("active");
           if (act==1)
             {
                 $("#sound").attr({
-                    src:"../img/sound_passive.png",
+                    src: TU + "/img/sound_passive.png",
                     active:"0"
                 });
                 $(this).text('on');
@@ -14,7 +14,7 @@ $(document).ready( function () {
           if (act==0)
             {
                 $("#sound").attr({
-                    src:"../img/sound_active.png",
+                    src: TU + "/img/sound_active.png",
                     active:"1"
                 });
                 $(this).text('off');

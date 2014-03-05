@@ -1,7 +1,7 @@
 <?php
 
 define('TU', get_bloginfo('template_url'));
-define('EXTRA_LANG', 'RU');
+define('EXTRA_LANG', 'EN');
 
 function getNavMenu($before_block = '<ul class="nav navbar-nav navbar-right">', $after_block = '</ul>', $before_item = '<li %s>', $after_item = '</li>')
 {
