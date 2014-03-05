@@ -8,8 +8,8 @@
  	                    <a id="on_off" style="cursor: pointer;" >off</a>
  	                </h2>
  	            </div>
- 	            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center"><h2><a href="/ru">rus</a></h2></div>
- 	            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-left"><h2><a href="/en" class="active">eng</a></h2></div>
+ 	            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center"><h2><a href="/ru" class="<?php echo active((EXTRA_LANG == 'RU')); ?>">rus</a></h2></div>
+ 	            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 text-left"><h2><a href="/en" class="<?php echo active((EXTRA_LANG == 'EN')); ?>">eng</a></h2></div>
  	        </div>
  	    </div>
  	</div>

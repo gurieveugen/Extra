@@ -21,17 +21,27 @@
                         <h3 class="thin skill" style="text-transform: uppercase;">ceo</h3>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row">                   
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <h3 class="linkteam thin name" style="margin-top: 30px;">England are ready to banish pain of Bloemfontein</h3>
-                        <h3 class="thin skill">21.12.2013</h3>
-                        <h4>333Interview with Tomas Silny, Creative director and Web designer at PositiveZero</h4>
-                        <h4>It isn't being a web designer. It requires extensive training in a multitude of disciplines. Through our interviews, we attempt to seek out those designers...</h4>
+                        <?php 
+                        $p          = getLastPost(); 
+                        $exclude_id = -1;
+                        if($p)
+                        {
+                            $exclude_id = $p->ID;
+                            $date       = date('d.m.Y', strtotime($p->post_date));                            
+                            ?>
+                            <h3 class="linkteam thin name" style="margin-top: 30px;"><?php echo $p->post_title; ?></h3>
+                            <h3 class="thin skill"><?php echo $date; ?></h3>
+                            <h4><?php echo $p->post_content; ?></h4>
+                            <?php
+                        }
+                        ?>
                     </div>                    
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-5 col-xs-12">
-                <?php echo getShortPosts(); ?>
+                <?php echo getShortPosts($exclude_id); ?>
             </div>
         </div>       
     </div> <!-- /container -->

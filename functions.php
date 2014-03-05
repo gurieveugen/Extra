@@ -1,6 +1,7 @@
 <?php
 
 define('TU', get_bloginfo('template_url'));
+define('EXTRA_LANG', 'RU');
 
 function getNavMenu($before_block = '<ul class="nav navbar-nav navbar-right">', $after_block = '</ul>', $before_item = '<li %s>', $after_item = '</li>')
 {
@@ -23,11 +24,12 @@ function getNavMenu($before_block = '<ul class="nav navbar-nav navbar-right">', 
 	return $before_block.$str.$after_block;
 }
 
-function getShortPosts()
+function getShortPosts($exclude = -1)
 {
 	$args  = array(
 		'posts_per_page'   => get_option('posts_per_page'),
 		'offset'           => 0,
+		'exclude'          => $exclude,
 		'orderby'          => 'post_date',
 		'order'            => 'DESC',
 		'post_type'        => 'post',
@@ -43,6 +45,21 @@ function getShortPosts()
 	}
 
 	return $str; 
+}
+
+function getLastPost()
+{
+	$args  = array(
+		'posts_per_page'   => 1,
+		'offset'           => 0,
+		'orderby'          => 'post_date',
+		'order'            => 'DESC',
+		'post_type'        => 'post',
+		'post_status'      => 'publish',
+		'suppress_filters' => true ); 
+	$items = get_posts($args);
+	if($items) return $items[0];
+	return NULL;
 }
 
 /**
